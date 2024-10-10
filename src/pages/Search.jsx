@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import Form from "../components/form";
+import Form from "../components/Form.jsx";
 import MovieDisplay from "../components/MovieDisplay";
 
 
