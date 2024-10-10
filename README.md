@@ -15,5 +15,8 @@ Explanations of the approach taken :
 - Displying data in poster format
 - Providing search functionality
 
-A link to your live site:
+Netlify link to live site:
+
+https://320reactmovies.netlify.app/
+
 
