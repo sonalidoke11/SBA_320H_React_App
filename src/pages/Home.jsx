@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Form from "../components/form";
 import ListDisplay from "../components/ListDisplay.jsx";
 
 export default function List() {
