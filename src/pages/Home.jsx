@@ -3,12 +3,13 @@ import ListDisplay from "../components/ListDisplay.jsx";
 
 export default function List() {
   const apiKey = import.meta.env.VITE_API_KEY;
+  const baseURL = import.meta.env.VITE_BASE_URL;
   const [series, setSeries] = useState(null);
   const [movies, setMovies] = useState(null);
 
   const getSeries = async () => {
     try {
-      const response = await fetch(`https://www.omdbapi.com/?i=tt0944947&Season=1&apikey=${apiKey}`);
+      const response = await fetch(`${baseURL}/?i=tt0944947&Season=1&apikey=${apiKey}`);
       const data = await response.json();
       setSeries(data);
     } catch (error) {

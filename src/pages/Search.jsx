@@ -5,8 +5,8 @@ import MovieDisplay from "../components/MovieDisplay";
 
 export default function Search(){
     // Constant with your API Key
-  //const apiKey = "d398cb9b";
   const apiKey = import.meta.env.VITE_API_KEY;
+  const baseURL = import.meta.env.VITE_BASE_URL;
 
   // State to hold movie data
   const [movie, setMovie] = useState(null);
@@ -15,7 +15,7 @@ export default function Search(){
   const getMovie = async(searchTerm) => {
     try {
 
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`);
+    const response = await fetch(`${baseURL}/?apikey=${apiKey}&t=${searchTerm}`);
     //console.log(response);
 
 

@@ -4,6 +4,7 @@ import MovieDisplay from "../components/MovieDisplay";
 
 export default function Episodes(){
   const apiKey = import.meta.env.VITE_API_KEY;
+  const baseURL = import.meta.env.VITE_BASE_URL;
 
   // State to hold movie data
   const [movie, setMovie] = useState(null);
@@ -12,7 +13,7 @@ export default function Episodes(){
   const getMovie = async(searchTerm) => {
     try {
     // Make fetch request and store the response
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=episode`);
+    const response = await fetch(`${baseURL}/?apikey=${apiKey}&t=episode`);
 
     // Parse JSON response into a JavaScript object
     const data = await response.json();
